@@ -60,7 +60,44 @@
      
    #ENTRYPOINT 入口点
    
+   #ENV 设置环境变量
    
+     ENV <key> <value>
+     
+     ENV <key1>=<value1> <key2>=<value2>...
+     
+   #ARG 构建参数
+   
+     docker build 中用 --build-arg <参数名>=<值> 
+     
+   #VOLUME 定义匿名卷
+   
+     VOLUME ["<路径1>", "<路径2>"...]
+     
+     VOLUME <路径>
+   
+   #EXPOSE 声明端口
+   
+     EXPOSE <端口1> [<端口2>...]
+     
+   #WORKDIR 指定工作目录
+     
+     WORKDIR <工作目录路径>
+     
+   #USER 指定当前用户
+     
+     USER <用户名>[:<用户组>]
+   #HEALTHCHECK 健康检查
+   
+     HEALTHCHECK [选项] CMD <命令>：设置检查容器健康状况的命令
+     
+     HEALTHCHECK NONE：如果基础镜像有健康检查指令，使用这行可以屏蔽掉其健康检查指令
+     
+   #ONBUILD 为他人做嫁衣裳
+     
+     ONBUILD <其它指令>
+     
+     
 #docker compose
 
 https://docs.docker.com/compose/
