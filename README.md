@@ -32,6 +32,10 @@
    
      docker build [选项] <上下文路径/URL/->
      
+   #查看日志
+   
+     docker logs
+     
 #Dockerfile指令
 
    #FROM 指定基础镜像
@@ -97,6 +101,39 @@
      
      ONBUILD <其它指令>
      
+#docker容器
+
+   #新建并启动
+   
+     docker run [-it] [--rm] [--name] [-p] [-d]
+     
+     [-d]参数  后台运行
+     
+   #启动已终止容器
+     docker container start
+   
+   #获取容器的输出信息
+     docker container logs [container ID or NAMES]  
+     
+   #终止容器
+   
+     docker container stop  
+     
+   #进入容器
+     
+     docker exec  -it [container ID or NAMES]  bash
+     
+   #导出和导入容器
+    
+     docker export
+     
+     docker import
+     
+   #删除容器
+   
+     docker container rm [-f] [container ID or NAMES]   //-f参数 可以删除运行中的容器
+     
+     docker container prune  //清理所有处于终止状态的容器
      
 #docker compose
 
