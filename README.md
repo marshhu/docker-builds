@@ -135,6 +135,28 @@
      
      docker container prune  //清理所有处于终止状态的容器
      
+
+#docker仓储
+
+  #登录/退出 Docker Hub
+  
+    docker login
+    
+    docker logout
+    
+  #查找官方仓库中的镜像
+    
+    docker search [search key]
+    
+  #拉取/推送镜像
+  
+    docker pull 
+    
+    docker push
+    
+      
+    
+    
 #docker compose
 
 https://docs.docker.com/compose/
